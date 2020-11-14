@@ -11,7 +11,7 @@ class Config:
         self.conf = None
 
         # Paths
-        self.parser.add_argument('--input_image_path', default=[os.path.dirname(os.path.abspath(__file__)) + '/examples/fruit/fruit.png'], nargs='+', help='path to one specific image file')
+        self.parser.add_argument('--input_image_path', default=[os.path.dirname(os.path.abspath(__file__)) + '/examples/fruit/download.jpg'], nargs='+', help='path to one specific image file')
         self.parser.add_argument('--output_dir_path', default=os.path.dirname(os.path.abspath(__file__)) + '/results', help='path to a directory to save results to')
         self.parser.add_argument('--name', default='fruit', help='name of current experiment, to be used for saving the results')
         self.parser.add_argument('--resume', type=str, default=None, help='checkpoint to resume from')
@@ -51,8 +51,8 @@ class Config:
         self.parser.add_argument('--iter_for_max_range', type=int, default=10000, help='In curriculum learning, when getting to this iteration all range is covered')
 
         # Sizes
-        self.parser.add_argument('--input_crop_size', type=int, default=256, help='input is cropped to this size')
-        self.parser.add_argument('--output_crop_size', type=int, default=256, help='output is cropped to this size')
+        self.parser.add_argument('--input_crop_size', type=int, default=128, help='input is cropped to this size')
+        self.parser.add_argument('--output_crop_size', type=int, default=128, help='output is cropped to this size')
         self.parser.add_argument('--max_scale', type=float, default=2.25, help='max retargeting scale')
         self.parser.add_argument('--min_scale', type=float, default=0.15, help='min retargeting scale')
         self.parser.add_argument('--must_divide', type=int, default=8, help='In curriculum learning, when getting to this iteration all range is covered')
